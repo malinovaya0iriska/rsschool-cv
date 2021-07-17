@@ -95,3 +95,11 @@
 * GitHub;
 * TDD/UNIT Tests;
 * Storybook;
+
+### Contacts ###
+***
+* e-mail:  martsulevich.irina@gmail.com
+* Location: POLATSK
+* GitHub: malinovaya0iriska  
+* Codewars: Iriskin
+* Phone: +375 33 329 14 63

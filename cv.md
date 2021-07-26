@@ -31,6 +31,12 @@
     id: string
     title: string
     isDone: boolean
+
+  }
+   export type FilterValuesType = 'all' | 'active' | 'completed'
+   
+   export const App = () => {
+
      }
      
      export type FilterValuesType = 'all' | 'active' | 'completed'

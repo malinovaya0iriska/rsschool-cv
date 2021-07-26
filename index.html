@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css-styles.css" rel="stylesheet" type="text/css">
+    <title>Iryna Martsulevich</title>
+</head>
+
+<body>
+    <header>
+        <h1>IRYNA MARTSULEVICH</h1>
+        <h2> Front-end developer ( Junior)</h2>
+    </header>
+    <div id="main">
+        <div class='left-column'>
+            <figure>
+                <img src="photo.jpg" alt="foto">
+            </figure>
+            <h2>Contacts</h2>
+            <ul>
+                <li><mark>e-mail: martsulevich.irina@gmail.com</mark></li>
+                <li>Location: POLATSK</li>
+                <li><mark>GitHub: malinovaya0iriska</mark></li>
+                <li>Codewars: Iriskin</li>
+                <li><mark>Phone: +375 33 329 14 63</mark></li>
+            </ul>
+        </div>
+        <div class='right-column'>
+            <article>
+                <h2> About me </h2>
+                <p>I am a novice developer with experience in creating SPAs using JavaScript, TypeScript, React,
+                    Redux.</p>
+                <p>My goal is to become a full-stack developer.</p>
+                <p>Ability to work in a team and constant self-study, no problem finding common ground with people,
+                    also
+                    work well in a team.</p>
+                <p>I spend my free time learning English with my tutor and technical documentation.</p>
+            </article>
+            <section>
+                <h2>Skills</h2>
+                <ul>
+                    <li> HTML5 </li>
+                    <li>CSS3</li>
+                    <li>Git/GitHub</li>
+                    <li>JS/TypeScript</li>
+                    <li>React</li>
+                    <li>Redux</li>
+                    <li>TDD/UNIT Tests</li>
+                    <li>Storybook</li>
+                </ul>
+            </section>
+            <h2> Education</h2>
+            <ul>
+                <li>Vitebsk State Order Of Peoples’ Friendship Medical University 2016,General Medicine Faculty,
+                    Anaesthetist</li>
+                <li>It-incubator </li>
+                <li>Udemi</li>
+                <li>W3school</li>
+                <li>Lectures CS50</li>
+                <li>HTML-Academy</li>
+                <li>Books:
+                    <ul>
+                        <li>Javascript For Kids</li>
+                        <li>Head First HTML with CSS</li>
+                    </ul>
+                </li>
+            </ul>
+            <h2>English Level</h2>
+            <p> B1-B2(Intermediate/Upper-Intermediate)</p>
+            <h2> Code example</h2>
+            <pre>
+                <code>
+            export type StateType = {
+            id: string
+            title: string
+            isDone: boolean 
+           }
+            export type FilterValuesType = 'all' | 'active' | 'completed'
+
+            export const App = () => {
+
+            const [tasks, setTasks] = useState&lt;Array&lt;StateType&gt;&gt;(
+                [
+                {id: v1(), title: 'HTML&CSS', isDone: true},
+                {id: v1(), title: 'JS', isDone: false},
+                {id: v1(), title: 'React', isDone: false},
+                {id: v1(), title: 'Typescript', isDone: true}
+                ])
+
+                let [filter, setFilter] = useState&lt;FilterValuesType&gt;('all')
+                    let filteredTasks = tasks
+                    if (filter === 'active') {
+                    filteredTasks = tasks.filter(t => t.isDone === false)
+                    }
+                    if (filter === 'completed') {
+                    filteredTasks = tasks.filter(t => t.isDone === true)
+                    }
+                    const filterTask = (value: FilterValuesType) => {
+                    setFilter(value)
+                    }
+                    const removeTask = (taskID: string) => {
+                    const restTasks = tasks.filter(t => t.id !== taskID)
+                    setTasks(restTasks)
+                    }
+                    const addTask = (gotTitle: string) => {
+                    const newTask = {id: v1(), title: gotTitle, isDone: false}
+                    setTasks([newTask, ...tasks])
+                    }
+
+                    const setCheckBox = (taskID: string, isDone: boolean) => {
+                    const checkedTask = tasks.find(t => taskID === t.id)
+                    if (checkedTask) {
+                    checkedTask.isDone = isDone
+                    setTasks([...tasks])
+                    } }
+                    return (
+                        &lt;div className="App"&gt;
+                        &lt;TodoList title={'What to learn'} tasks={filteredTasks} removeTask={removeTask}
+                            filterTask={filterTask} addTask={addTask} filter={filter} setCheckBox={setCheckBox}&gt;
+                            &lt;/div&gt;
+                    )}
+                </code>
+            </pre>
+        </div>
+    </div>
+    <footer>
+        <div class="logo">
+            <a href="https://rs.school/js/">
+                <img src="rs_school_js.svg" alt='Logo RS School'>
+            </a>
+        </div>
+        <div class="year">© 2021</div>
+        <div class="logo"><a href='https://github.com/malinovaya0iriska'><img src="logo-githube.png"
+                    alt='logoGithube'>My GitHub</a>
+        </div>
+    </footer>
+</body>
+
+</html>

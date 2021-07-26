@@ -26,15 +26,23 @@
 
 ### Code example  ###
 ***
+
     export type StateType = {
     id: string
     title: string
     isDone: boolean
+
   }
    export type FilterValuesType = 'all' | 'active' | 'completed'
    
    export const App = () => {
 
+     }
+     
+     export type FilterValuesType = 'all' | 'active' | 'completed'
+     
+     export const App = () => {
+   
     const [tasks, setTasks] = useState<Array<StateType>>(
         [
             {id: v1(), title: 'HTML&CSS', isDone: true},

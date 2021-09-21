@@ -1,1 +1,1 @@
-https://malinovaya0iriska.github.io/rsschool-cvPrev/
+https://malinovaya0iriska.github.io/rsschool-cv/

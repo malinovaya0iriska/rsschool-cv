@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box; 
 }
-  body {
+  .container {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -16,7 +16,7 @@
     font-weight: 900;
 }
 .left-column figure img{
-    height: 60vh;
+    height: 40%;
 }
 .right-column article p{
     margin: 5px 0;
@@ -34,7 +34,6 @@
  
   header, footer {
     background: yellowgreen;
-    height: 20vh;
     justify-content: center;
 }
   header, footer, .left-column,  .right-column {
@@ -43,7 +42,7 @@
 
 }
 footer .logo img{
-    height:5vh;
+    height:30px;
 } 
 footer .logo a{
     color: sienna;
@@ -54,7 +53,7 @@ footer .logo a{
 footer {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
 }
 footer .year {
     font-size: 1.5em;
